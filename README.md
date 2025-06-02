@@ -38,11 +38,12 @@ python -m venv venv
 venv\Scripts\activate
 # On Windows
 ```
-# or
+#or
 ```bash
 source venv/bin/activate   # On macOS/Linux
 ```
-```bash pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 ```
 
 2. Configure Environment
@@ -52,4 +53,74 @@ MONGO_URI=mongodb+srv://youruser:yourpass@cluster0.mongodb.net/
 JWT_SECRET=your_super_secret_key
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
+# 3. Run Locally
+```bash
+uvicorn app.main:app --reload
+```
+# Visit http://localhost:8000/docs for Swagger UI.
+# API Usage Example
+# POST /auth/register
+```bash
+{
+  "username": "exampleuser",
+  "email": "example@email.com",
+  "password": "yourpassword"
+}
+```
+# 2. Login
+# POST /auth/login
+``` bash
+{
+  "email": "example@email.com",
+  "password": "yourpassword"
+}
+```
+Copy the access_token from the response.
 
+# 3. Use the Token
+# In Swagger, click Authorize and paste Bearer <token>
+
+# In Postman, set header: Authorization: Bearer <token>
+# 4. Create a Task
+# POST /tasks/
+``` bash
+{
+  "title": "My Task",
+  "description": "Details...",
+  "status": "pending",
+  "due_date": "2025-06-20T10:00:00"
+}
+```
+# Get a Single Task
+# GET /tasks/{task_id}
+```bash
+{
+  "id": "string",
+  "title": "Finish Assignment",
+  "description": "Complete FastAPI backend by Sunday",
+  "status": "pending",
+  "due_date": "2025-06-21T23:59:00",
+  "created_at": "2025-06-10T15:34:00"
+}
+```
+# Update a Task
+# PUT /tasks/{task_id}
+``` bash
+{
+  "title": "Finish Assignment (Updated)",
+  "status": "completed"
+}
+```
+# 5. Delete a Task
+# DELETE /tasks/{task_id}
+``` bash
+{
+  "detail": "Task deleted"
+}
+```
+# Author
+# Sajidcodecrack
+
+This repo demonstrates modern backend architecture and production deployment with FastAPI. For questions or collaboration, open an issue or contact me.
+
+# sajidahamedkhulna2000@gmail.com
