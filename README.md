@@ -22,6 +22,15 @@ A secure, production-ready backend API for user and task management, built with 
 ##  Live API & Documentation
 
 - **Live Demo:** [https://fastapi-backend-1-wa76.onrender.com/docs](https://fastapi-backend-1-wa76.onrender.com/docs)
+  # Live render: https://fastapi-backend-1-wa76.onrender.com
+  # Postman Testing 
+  # https://fastapi-backend-1-wa76.onrender.com/auth/register (Registration)
+  # https://fastapi-backend-1-wa76.onrender.com/auth/Login    (Login)
+  # https://fastapi-backend-1-wa76.onrender.com/tasks/        (Creat Task) (Post)
+  # https://fastapi-backend-1-wa76.onrender.com/tasks/        (Get all your task) (GET)
+  # https://fastapi-backend-1-wa76.onrender.com/tasks/{task_id} (Update the task) (PUT)
+  # https://fastapi-backend-1-wa76.onrender.com/tasks/{task_id}  (Delete the task) (Delete)
+
 
 ---
 
