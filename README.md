@@ -32,9 +32,24 @@ A secure, production-ready backend API for user and task management, built with 
 ```bash
 git clone https://github.com/Sajidcodecrack/FastAPI-backend-.git
 cd FastAPI-backend-/user_task_manager
+```
+ ```bash 
 python -m venv venv
-venv\Scripts\activate      # On Windows
+venv\Scripts\activate
+# On Windows
+```
 # or
+```bash
 source venv/bin/activate   # On macOS/Linux
+```
+```bash pip install -r requirements.txt
+```
 
-pip install -r requirements.txt
+2. Configure Environment
+Copy .env.example as .env and fill with your MongoDB URI and JWT secret:
+```bash
+MONGO_URI=mongodb+srv://youruser:yourpass@cluster0.mongodb.net/
+JWT_SECRET=your_super_secret_key
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
+
